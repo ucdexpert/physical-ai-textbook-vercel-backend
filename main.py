@@ -21,6 +21,8 @@ app = FastAPI(title="Physical AI RAG API", lifespan=lifespan)
 origins = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
+    "https://physical-ai-textbook-frontend.vercel.app",  # ✅ ADD THIS
+    "https://physical-ai-textbook-frontend-*.vercel.app",
 ]
 
 app.add_middleware(
