@@ -22,7 +22,7 @@ origins = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
     "https://physical-ai-textbook-frontend.vercel.app",  # 
-    "https://physical-ai-textbook-frontend-*.vercel.app",
+    
 ]
 
 app.add_middleware(
