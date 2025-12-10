@@ -10,7 +10,9 @@ from pydantic import BaseModel
 from agents.tool import function_tool
 
 # Load environment variables
-load_dotenv()
+from pathlib import Path
+env_path = Path(__file__).parent / ".env"
+load_dotenv(dotenv_path=env_path)
 
 # Configure Logging
 logging.basicConfig(level=logging.INFO)

@@ -11,9 +11,14 @@ from pathlib import Path
 from typing import List
 
 # Load environment variables from .env file
-load_dotenv()
+env_path = Path(__file__).parent / ".env"
+load_dotenv(dotenv_path=env_path)
 
 gemini_api_key = os.getenv("GEMINI_API_KEY") #get gemini api key from .env file
+if gemini_api_key:
+    print(f"Loaded GEMINI_API_KEY: {gemini_api_key[:5]}...")
+else:
+    print("Failed to load GEMINI_API_KEY")
 
 #Gemini API key not found condition
 if not gemini_api_key:
